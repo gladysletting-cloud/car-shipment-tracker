@@ -3,7 +3,7 @@ import {
   isValidVin,
   isValidTransition,
   getMissingFields,
-} from "../validation.js";
+} from "../js/validation.js";
 
 describe("isValidVin", () => {
   it("accepts a valid 17-character VIN", () => {
