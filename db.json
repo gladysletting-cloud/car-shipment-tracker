@@ -1,11 +1,11 @@
 {
-    "shipment": [ 
+    "shipments": [ 
         {
             "id": 1,
             "make": "Toyota",
             "model": "Land Cruiser",
             "year": 2022,
-            "VIN": "JTMHV05J004123456",
+            "vin": "JTMHV05J004123456",
             "origin": "Mombasa",
             "destination": "Nairobi",
             "carrier": "Maersk",
@@ -13,8 +13,14 @@
             "status": "In transit",
             "notes": "",
             "history": [
-                { "status": "Booked", "location": "Mombasa", "date": "2026-10-10" },
-                { "status": "In transit", "location": "Voi", "date": "2026-10-21" }
+                { "status": "Booked",
+                  "location": "Mombasa", 
+                  "date": "2026-10-10" 
+                },
+                { "status": "In transit",
+                  "location": "Voi",
+                  "date": "2026-10-21"
+                }
             ]
 
         },
@@ -23,7 +29,7 @@
             "make": "BMW",
             "model": "X5",
             "year": 2021,
-            "VIN": "WBA5A5C50FD123456",
+            "vin": "WBA5A5C50FD123456",
             "origin": "Dubai",
             "destination": "Mombasa",
             "carrier": "MSC",
@@ -31,7 +37,10 @@
             "status":"At port",
             "notes":" Awaiting customs clearance",
             "history": [
-                {"status":"Booked","location":"DUbai","date":"2026-11-05"}
+                {"status":"Booked",
+                 "location":"DUbai",
+                 "date":"2026-11-05"
+                }
             ]
         }
     ]
