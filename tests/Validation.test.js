@@ -52,9 +52,14 @@ describe("isValidTransition", () => {
 describe("getMissingFields", () => {
   it("returns an empty array when nothing is missing", () => {
     const shipment = {
-      make: "Toyota", model: "Land Cruiser", year: 2022,
-      vin: "JTMHV05J004123456", origin: "Mombasa",
-      destination: "Nairobi", carrier: "Maersk", eta: "2026-10-28",
+      make: "Toyota", 
+      model: "Land Cruiser", 
+      year: 2022,
+      vin: "JTMHV05J004123456", 
+      origin: "Mombasa",
+      destination: "Nairobi", 
+      carrier: "Maersk", 
+      eta: "2026-10-28",
     };
     expect(getMissingFields(shipment)).toEqual([]);
   });
