@@ -10,15 +10,25 @@ export const STATUSES = [
 ];
 
 const REQUIRED_FIELDS = [
-  "make", "model", "year", "vin", "origin", "destination", "carrier", "eta",
+  "make",
+  "model",
+  "year",
+  "vin",
+  "origin",
+  "destination",
+  "carrier", 
+  "eta",
 ];
 
 export function isValidVin(vin) {
-  if (typeof vin !== "string") return false;
+  if (typeof vin !== "string") 
+    return false;
   const cleaned = vin.trim().toUpperCase();
-  if (cleaned.length !== 17) return false;
+  if (cleaned.length !== 17) 
+    return false;
   for (const char of cleaned) {
-    if (!ALLOWED_VIN_CHARS.includes(char)) return false;
+    if (!ALLOWED_VIN_CHARS.includes(char)) 
+      return false;
   }
   return true;
 }
@@ -26,7 +36,8 @@ export function isValidVin(vin) {
 export function isValidTransition(current, next) {
   const currentIndex = STATUSES.indexOf(current);
   const nextIndex = STATUSES.indexOf(next);
-  if (currentIndex === -1 || nextIndex === -1) return false;
+  if (currentIndex === -1 || nextIndex === -1) 
+    return false;
   return nextIndex === currentIndex + 1;
 }
 

@@ -3,41 +3,49 @@ import {
   isValidVin,
   isValidTransition,
   getMissingFields,
-} from "../js/validation.js";
+} from "../validation.js";
 
 describe("isValidVin", () => {
   it("accepts a valid 17-character VIN", () => {
-    expect(isValidVin("JTMHV05J004123456")).toBe(true);
+    expect(isValidVin("JTMHV05J004123456"))
+    .toBe(true);
   });
 
   it("rejects a VIN that is too short", () => {
-    expect(isValidVin("JTMHV05J0041")).toBe(false);
+    expect(isValidVin("JTMHV05J0041"))
+    .toBe(false);
   });
 
   it("rejects a VIN containing the letter O", () => {
-    expect(isValidVin("JTMHV05J00412345O")).toBe(false);
+    expect(isValidVin("JTMHV05J00412345O"))
+    .toBe(false);
   });
 
   it("rejects a value that is not a string", () => {
-    expect(isValidVin(12345)).toBe(false);
+    expect(isValidVin(12345))
+    .toBe(false);
   });
 });
 
 describe("isValidTransition", () => {
   it("allows moving to the next status", () => {
-    expect(isValidTransition("Booked", "Picked up")).toBe(true);
+    expect(isValidTransition("Booked", "Picked up"))
+    .toBe(true);
   });
 
   it("blocks skipping a status", () => {
-    expect(isValidTransition("Booked", "Delivered")).toBe(false);
+    expect(isValidTransition("Booked", "Delivered"))
+    .toBe(false);
   });
 
   it("blocks moving backwards", () => {
-    expect(isValidTransition("In transit", "Booked")).toBe(false);
+    expect(isValidTransition("In transit", "Booked"))
+    .toBe(false);
   });
 
   it("rejects an unknown status", () => {
-    expect(isValidTransition("Booked", "Lost")).toBe(false);
+    expect(isValidTransition("Booked", "Lost"))
+    .toBe(false);
   });
 });
 
