@@ -1,11 +1,14 @@
 import { getShipments } from "./api.js";
+import { renderShipments, showMessage } from "./ui.js";
 
 async function init() {
+  showMessage("Loadind shipment...")
   try {
     const shipments = await getShipments();
-    console.log(shipments);
+    shipments("");
+    renderShipments(shipments)
   } catch (error) {
-    console.error(error.message);
+    showMessage(error.message, true);
   }
 }
 
