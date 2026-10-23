@@ -1,0 +1,70 @@
+:root{
+    --navy:#1f3a5f;
+    --orange: #f28c28;
+    --blue: #4A90B8;
+    --bg: #f5f6f8;
+    --border: #d9dce1;
+    --text: #222222;
+}
+
+body{
+    margin: 0;
+    font-family: inter, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+nav{
+    background: var(--navy);
+    color: white;
+    padding: 16px 80px;
+}
+nav h1{
+    margin: 0;
+    font-size: 24px;
+}
+main{
+    padding: 32px 80px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+th, td {
+    border: 1px solid var(--border);
+    text-align:left;
+    padding: 1px solid var(--border);
+}
+h2{
+    color: var(--navy);
+    font-size: 32px;
+}
+th{
+    background: var(--bg);
+}
+.badge{
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 14px;
+    border-radius: 14px;
+    font-weight: 500;
+    color: var(--navy);
+    background: rgba(217 220 225 0.6);
+}
+.badge-in-transit{
+    background: rgba(74, 144, 184, 0.25);
+}
+.badge-at-port-customs {
+    background: rgba(242, 140, 40, 0.25);
+}
+.badge-delivery{
+    background: rgba(31, 58, 95, 0.2);
+}
+#message{
+    min-height: 24px;
+
+}
+#message-error{
+    color: #b3261e;
+    font-weight: 500;
+}
