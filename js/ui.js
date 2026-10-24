@@ -43,3 +43,17 @@ export function renderShipments(shipments) {
         tbody.appendChild(row);
     }
 }
+export function clearFieldErrors(){
+    for(const error of document.querySelectorAll(".field-error")){
+        error.textContent ="";
+    }
+    for (const input of document.querySelectorAll(".invalid")){
+        input.classList.remove("invalid");
+    }
+}
+export function showFieldErrors(errors){
+    for(const [field, text] of Object.entries(errors)){
+        document.querySelector('#${field}-error').textContent = text;
+        document.querySelector('#${field}').classList.add("invalid");
+    }
+}

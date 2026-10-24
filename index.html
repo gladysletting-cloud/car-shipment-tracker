@@ -11,6 +11,56 @@
         <h1>ShipTrack</h1>
     </header>
     <main>
+        <section>
+            <h2 id="form-heading">Add Shipment</h2>
+            <form id="shipment-form" novalidate>
+                <div class="field">
+                    <label for="make">Make</label>
+                    <input id="make" type="text" placeholder="e.g. Toyota">
+                    <p class="field-error" id="model-error"></p>
+                </div>
+                <div class="field">
+                    <label for="model">Model</label>
+                    <input id="model" name="model" type="text" placeholder="e.g. Land Cruiser">
+                    <p class="field-error" id="model/error"></p>
+                </div>
+                <div class ="field">
+                    <label for="year">Year</label>
+                    <input id="year" type="text" name="year" inputmode="numeric" placeholder="e.g. 2022">
+                    <p class="field-error" id="year-error"></p>
+                </div>
+                <div class="field">
+                    <label for="vin">VIN</label>
+                    <input id="vin" name="vin" type="text" placeholder="17 characters">
+                    <p class="field-error" id="vin-error"></p>
+                </div>
+                <div class="field">
+                    <label for="origin">Origin</label>
+                    <input id="origin" name="origin" type="text" placeholder="e.g. Mombasa">
+                    <p class="field-error" id="origin-error"></p>
+                </div>
+                <div class="field">
+                    <label for="destination">Destination</label>
+                    <input id="destination" name="destination" type="text" placeholder="e.g. Nairobi">
+                    <p class="field-error" id="destination-eror"></p>
+                </div>
+                <div class="field">
+                    <label for="carrier">Carrier</label>
+                    <input id="carrier" name="carrier" type="text" placeholder="e.g maersk">
+                    <p class="field-error" id="carrier-error"></p>
+                </div>
+                <div class="field">
+                    <label for="eta">ETA</label>
+                    <input id="eta" name="eta" type="date">
+                    <p class="field-error" id="eta-error"></p>
+                </div>
+                <div class="field field-wide">
+                    <label for="notes">Notes (optional) </label>
+                    <textarea name="notes" id="notes" rows="3"></textarea>
+                </div>
+                <button type="subbmit">Save Shipment</button>
+            </form>
+        </section>
         <h2>Shipments Overview</h2>
         <p id="message" role="status"></p>
         <table>

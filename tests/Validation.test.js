@@ -3,6 +3,7 @@ import {
   isValidVin,
   isValidTransition,
   getMissingFields,
+  validateShipment,
 } from "../js/validation.js";
 
 describe("isValidVin", () => {
@@ -67,5 +68,28 @@ describe("getMissingFields", () => {
   it("lists the fields that are empty or absent", () => {
     expect(getMissingFields({ make: "Toyota", model: "  " })).toContain("model");
     expect(getMissingFields({ make: "Toyota" })).toContain("vin");
+  });
+});
+describe("validateShipment", () => {
+  const valid = {
+    make: "Toyota", model: "Land Cruiser", year: "2022",
+    vin: "JTMHV05J004123456", origin: "Mombasa",
+    destination: "Nairobi", carrier: "Maersk", eta: "2026-10-28",
+  };
+
+  it("returns no errors for a valid shipment", () => {
+    expect(validateShipment(valid)).toEqual({});
+  });
+
+  it("reports a bad VIN", () => {
+    expect(validateShipment({ ...valid, vin: "123" }).vin).toBeDefined();
+  });
+
+  it("reports a bad year", () => {
+    expect(validateShipment({ ...valid, year: "abc" }).year).toBeDefined();
+  });
+
+  it("reports missing fields", () => {
+    expect(validateShipment({ ...valid, make: "" }).make).toBeDefined();
   });
 });

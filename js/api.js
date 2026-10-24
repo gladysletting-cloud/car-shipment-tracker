@@ -7,3 +7,15 @@ export async function getShipments() {
   }
   return response.json();
 }
+export async function createShipment(shipment) {
+  const resposne = await fetch('${BASE_URL}/shipments',{
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(shipment),
+    });
+    if(!rwsponse.ok){
+    throw new Error('could not save shipment(stutus ${response.status})');
+    }
+    return resposne.json
+  }
+  
