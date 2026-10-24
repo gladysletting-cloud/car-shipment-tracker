@@ -8,7 +8,7 @@
             "vin": "JTMHV05J004123456",
             "origin": "Mombasa",
             "destination": "Nairobi",
-            "carrier": "Maersk",
+            "carrier": "Coastal Car Haulers",
             "eta": "2026-10-28",
             "status": "In transit",
             "notes": "",
@@ -30,18 +30,45 @@
             "model": "X5",
             "year": 2021,
             "vin": "WBA5A5C50FD123456",
-            "origin": "Dubai",
-            "destination": "Mombasa",
-            "carrier": "MSC",
-            "eta":"2026-11-05",
-            "status":"At port",
-            "notes":" Awaiting customs clearance",
+            "origin": "Nakuru",
+            "destination": "Eldoret",
+            "carrier": "Rift Valley Transporters",
+            "eta":"2026-10-23",
+            "status":"Out for delivery",
+            "notes":"",
             "history": [
                 {"status":"Booked",
-                 "location":"DUbai",
-                 "date":"2026-11-05"
+                 "location":"Nakuru",
+                 "date":"2026-10-21"
+                },
+                {"status": "In transit",
+                "location": "Nakuru",
+                "date" : "2026-10-23"
+                },
+               {"status":"Out for delivery",
+                "location": "Eldoret",
+                "date":"2026-10-24"
                 }
             ]
+        },
+        { 
+            "id": 3,
+            "make": "Nissan",
+            "model": "X-Trail",
+            "year": 2020,
+            "vin": "JN1TBNT30Z0123456",
+            "origin": "Nairobi",
+            "destination": "Kisumu",
+            "carrier": "Lake Region Movers",
+            "eta": "2026-11-02",
+            "status": "Booked",
+            "notes": "Customer collects from the Kisumu yard",
+            "history": [
+                {"status": "Booked",
+                "location": "Nairobi", 
+                "date": "2026-10-23"
+                }
+            ] 
         }
     ]
 }

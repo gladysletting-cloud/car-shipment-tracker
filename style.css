@@ -54,7 +54,7 @@ th{
 .badge-in-transit{
     background: rgba(74, 144, 184, 0.25);
 }
-.badge-at-port-customs {
+.badge-out-for-delivery {
     background: rgba(242, 140, 40, 0.25);
 }
 .badge-delivery{

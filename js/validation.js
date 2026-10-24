@@ -4,7 +4,6 @@ export const STATUSES = [
   "Booked",
   "Picked up",
   "In transit",
-  "At port/customs",
   "Out for delivery",
   "Delivered",
 ];
